@@ -1,0 +1,12 @@
+
+::ng-deep .ag-theme-alpine .ag-header-row-column {
+   background-color: #000000;
+   color: white;
+}
+::ng-deep .ag-theme-alpine .ag-header-row-column-group {
+   background-color: #666;
+   color: white;
+}
+::ng-deep .ag-theme-alpine .ag-header-row-column-group  .ag-header-group-cell-with-group[aria-colindex="1"] {
+   background-color:white;
+}
