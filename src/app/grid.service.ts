@@ -6,7 +6,7 @@ import { EventEmitter, forwardRef, Inject, Injectable } from '@angular/core';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
 import { of } from 'rxjs';
-import { fakeClusterStoreData } from './data/fakeData';
+import { fakeClusterStoreData, fakeStoreOverLapData } from './data/fakeData';
 
 @Injectable({
   providedIn: "root",
@@ -77,6 +77,17 @@ export class GridService {
   getClusterStoreRanking(payload) {
     // return this.http.post(API.CLUSTER_DEEP_DIVE, payload);
     return of(fakeClusterStoreData);
+  }
+
+
+  /**
+   * Hari Sankar
+   * @param payload
+   * @returns data
+   */
+   getStoreOverlap(payload) {
+    // return this.http.post(API.CLUSTER_DEEP_DIVE, payload);
+    return of(fakeStoreOverLapData);
   }
 
   /**

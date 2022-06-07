@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { ExcelExportComponent } from './excel-export/excel-export.component';
 import { AgGridModule } from 'ag-grid-angular';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { StoreOverlapComponent } from './store-overlap/store-overlap.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AgGridComponent,
-    ExcelExportComponent
+    ExcelExportComponent,
+    StoreOverlapComponent
   ],
   imports: [
     BrowserModule,

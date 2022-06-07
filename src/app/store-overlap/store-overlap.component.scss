@@ -1,0 +1,11 @@
+
+// ::ng-deep .ag-theme-alpine .lock-pinned{
+//     background: #f2f2f2;
+// }
+
+::ng-deep .ag-theme-alpine {
+    --ag-odd-row-background-color: #f2f2f2;
+  }
+  ::ng-deep .ag-theme-alpine .ag-row-odd {
+    background-color: var(--ag-odd-row-background-color);
+  }
