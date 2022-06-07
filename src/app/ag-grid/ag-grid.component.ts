@@ -26,11 +26,15 @@ export class AgGridComponent implements OnInit {
     this.originalApiData= JSON.parse(
       JSON.stringify(fakeClusterStoreData)
     );
+    console.log( this.originalApiData)
+
     this.agGridSer
-      .getClusterStoreRankingData()
+      .getClusterStoreRanking(this.originalApiData)
       .pipe(takeUntil(this.destroy$))
       .subscribe(
         (res:any) => {
+          console.log("res", res);
+
           if (!res) {
             return;
           }
@@ -39,6 +43,7 @@ export class AgGridComponent implements OnInit {
             this.originalApiData,
             this.defaultDataSetJson
           )
+          console.log( this.originalApiData)
         },
         error => {        }
       );
@@ -134,44 +139,7 @@ public rowData$!: any;
 
 // Example load data from sever
 onGridReady(params: GridReadyEvent) {
-  this.rowData$ = [
-    {
-        "col1": "Segment A",
-        "col2": 10.16400628431932,
-        "col3": 44.720850405077535,
-        "col5": 16,
-        "col7": 57,
-        "col4": 66,
-        "col6": 24
-    },
-    {
-        "col1": "Segment B",
-        "col2": 10.16400628431932,
-        "col3": 44.720850405077535,
-        "col5": 11,
-        "col7": 79,
-        "col4": 8,
-        "col6": 56
-    },
-    {
-        "col1": "Segment C",
-        "col2": 10.16400628431932,
-        "col3": 44.720850405077535,
-        "col5": 66,
-        "col7": 44,
-        "col4": 22,
-        "col6": 33
-    },
-    {
-        "col1": "Segment All",
-        "col2": 0,
-        "col3": 0,
-        "col5": 11,
-        "col7": 88,
-        "col4": 13,
-        "col6": 66
-    }
-];
+  this.rowData$ = this.originalApiData.data;
   // this.http
   //   .get<any[]>('https://www.ag-grid.com/example-assets/row-data.json');
 }

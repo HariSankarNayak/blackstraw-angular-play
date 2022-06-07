@@ -6,5 +6,3 @@ npm install
 ng serve --open
 ```
 
-## Borrowed from -
-
