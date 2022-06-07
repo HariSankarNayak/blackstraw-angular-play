@@ -32,6 +32,7 @@ export class AgGridComponent implements OnInit {
       .getClusterStoreRanking(this.originalApiData)
       .pipe(takeUntil(this.destroy$))
       .subscribe(
+        
         (res:any) => {
           console.log("res", res);
 
@@ -73,6 +74,8 @@ export class AgGridComponent implements OnInit {
         field: 'col2',
         width: 250,
         filter: 'agTextColumnFilter',
+        valueFormatter: this.currencyFormatter,
+
       },
       {
         headerName: 'Vs Comparison Period',
@@ -148,7 +151,10 @@ onGridReady(params: GridReadyEvent) {
 onCellClicked( e: CellClickedEvent): void {
   console.log('cellClicked', e);
 }
-
+currencyFormatter(params: any) {
+  console.log("params", params);
+  return params.value.toFixed(2);
+}
 // Example using Grid's API
 clearSelection(): void {
   this.setWidthAndHeight('100%', '100%');
