@@ -28,6 +28,7 @@
     "countup.js": "^2.0.6",
     "exceljs": "^4.0.1",
     "file-saver": "^2.0.2",
+    "highcharts": "^10.1.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "waypoints": "^4.0.1",

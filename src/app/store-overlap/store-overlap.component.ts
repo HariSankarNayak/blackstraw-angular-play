@@ -148,29 +148,8 @@ export class StoreOverlapComponent implements OnInit {
     this.agGrid.api.deselectAll();
   }
 
-  /**
-   *
-   * @param width
-   * @param height
-   */
-  setWidthAndHeight(width: string, height: string) {
-    this.style = {
-      width: width,
-      height: height,
-    };
-  }
-  public style: any = {
-    width: "100%",
-    height: "100%",
-    flex: "1 1 auto",
-  };
-  // columnDefs1 = [{ field: "make" }, { field: "model" }, { field: "price" }];
 
-  // rowData = [
-  //   { make: "Toyota", model: "Celica", price: 35000 },
-  //   { make: "Ford", model: "Mondeo", price: 32000 },
-  //   { make: "Porsche", model: "Boxter", price: 72000 }
-  // ];
+
 }
 /**
  * Hari Sankar
