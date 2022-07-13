@@ -365,14 +365,17 @@ export class HighchartsDemoComponent implements OnInit, AfterViewInit {
                 fontSize: "13px",
                 fontWeight: "normal",
               },
-              
+              nullFormat:"d",
+              enabled: true,
               formatter: function () {
+                let percentage=this.point.percentValue?this.point.percentValue:'0';
+                let actual=this.point.actualValue? this.point.actualValue:"0";
                 return (
                   '<div style="text-align:center;font-weight: bold;">' +
-                  this.point.percentValue +
+                  percentage +
                   " %</div><br>" +
                   '<div style="text-align:center">' +
-                  this.point.actualValue +
+                  actual +
                   "</div><br>"
                 );
               },
@@ -430,15 +433,15 @@ export class HighchartsDemoComponent implements OnInit, AfterViewInit {
                 name: "B and C",
                 longDescription: "sdfsdf",
               },
-              {
-                sets: ["B", "C", "A"],
-                value: 1,
-                actualValue: 45645,
-                decimalValue: 0.43,
-                percentValue: 0,
-                name: "middle data",
-                longDescription: "sdfsdf",
-              },
+              // {
+              //   sets: ["B", "C", "A"],
+              //   value: 1,
+              //   actualValue: 45645,
+              //   decimalValue: 0.43,
+              //   percentValue: 0,
+              //   name: "middle data",
+              //   longDescription: "sdfsdf",
+              // },
             ],
           },
         ],
