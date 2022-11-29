@@ -19,10 +19,10 @@ export class HighchartsDemoComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   public ngAfterViewInit(): void {
-    // this.createChartGauge();
-    // this.createChartPie();
-    // this.createChartColumn();
-    // this.createChartLine();
+    this.createChartGauge();
+    this.createChartPie();
+    this.createChartColumn();
+    this.createChartLine();
     this.createVennChart();
   }
 
@@ -34,6 +34,7 @@ export class HighchartsDemoComponent implements OnInit, AfterViewInit {
     const chart = Highcharts.chart("chart-gauge", {
       chart: {
         type: "solidgauge",
+        backgroundColor: '#FCFFC5',
       },
       title: {
         text: "Gauge Chart",
@@ -43,9 +44,9 @@ export class HighchartsDemoComponent implements OnInit, AfterViewInit {
       },
       pane: {
         startAngle: -90,
-        endAngle: 90,
-        center: ["50%", "85%"],
-        size: "160%",
+        endAngle: 270,
+        center: ["50%", "50%"],
+        size: "100%",
         background: {
           innerRadius: "60%",
           outerRadius: "100%",

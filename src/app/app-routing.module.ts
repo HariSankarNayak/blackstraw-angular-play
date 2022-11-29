@@ -7,6 +7,7 @@ import { HighchartsDemoComponent } from './highcharts-demo/highcharts-demo.compo
 import { MatrixClusterComponent } from './shared-components/matrix-cluster/matrix-cluster.component';
 import { MatrixesLayoutComponent } from './shared-components/matrixes-layout/matrixes-layout.component';
 import { StoreOverlapComponent } from './store-overlap/store-overlap.component';
+import { SuummaryComponent } from './suummary/suummary.component';
 
 const routes: Routes = [
   { path: 'ag', component: AgGridComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'high', component: HighchartsDemoComponent },
   // { path: 'matrixs', component: MatrixesLayoutComponent },
   { path: 'gold', component: GoldenStoresComponent },
+  { path: 'summary', component: SuummaryComponent },
 
 
   { path: '**', redirectTo: 'matrixs' }

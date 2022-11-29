@@ -1,49 +1,45 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a
+        class="nav-item nav-link"
+        routerLinkActive="active"
+        routerLink="/export"
+        >export</a
+      >
+
+      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/ag"
+        >Ag Grid</a
+      >
+      <a
+        class="nav-item nav-link"
+        routerLinkActive="active"
+        routerLink="/overlap"
+        >overlap</a
+      >
+      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/high"
+        >high</a
+      >
+
+      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/gold"
+        >gold</a
+      >
+      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/summary"
+      >Summary</a
     >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a
-          class="nav-item nav-link"
-          routerLinkActive="active"
-          routerLink="/export"
-          >export</a
-        >
-        
-
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/ag"
-          >Ag Grid</a
-        >
-        <a
-          class="nav-item nav-link"
-          routerLinkActive="active"
-          routerLink="/overlap"
-          >overlap</a
-        >
-        <a
-          class="nav-item nav-link"
-          routerLinkActive="active"
-          routerLink="/high"
-          >high</a
-        >
-
-        <a
-          class="nav-item nav-link"
-          routerLinkActive="active"
-          routerLink="/gold"
-          >gold</a
-        >
-      </div>
     </div>
-  </nav>
-  <router-outlet></router-outlet>
+  </div>
+</nav>
+<router-outlet ></router-outlet>
