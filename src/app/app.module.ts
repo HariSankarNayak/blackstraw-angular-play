@@ -15,7 +15,8 @@ import { GoldenStoresComponent } from './golden-stores/golden-stores.component';
 import { SharedModule } from './shared-components/shared.module';
 import { VennHighchartsComponent } from './venn-highcharts/venn-highcharts.component';
 import { SuummaryComponent } from './suummary/suummary.component';
-
+import { HighAngComponent } from './high-ang/high-ang.component';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,15 @@ import { SuummaryComponent } from './suummary/suummary.component';
     // MatrixesLayoutComponent,
     GoldenStoresComponent,
     VennHighchartsComponent,
-    SuummaryComponent
+    SuummaryComponent,
+    HighAngComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AgGridModule,
+    HighchartsChartModule,
     SharedModule
   ],
   providers: [],
